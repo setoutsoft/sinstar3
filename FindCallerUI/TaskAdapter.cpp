@@ -35,6 +35,11 @@ namespace SOUI {
 		return TRUE;
 	}
 
+	void CTaskAdapter::ClearTask() {
+		m_arrTasks.RemoveAll();
+		notifyDataSetChanged();
+	}
+
 	int CTaskAdapter::getCount()
 	{
 		return m_arrTasks.GetCount();
